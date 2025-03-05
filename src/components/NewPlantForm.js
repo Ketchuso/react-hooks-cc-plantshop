@@ -47,11 +47,11 @@ function NewPlantForm({list, setList}) {
   return (
     <div className="new-plant-form">
       <h2>New Plant</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input onChange={plantChange} type="text" name="name" placeholder="Plant name" />
         <input onChange={plantChange} type="text" name="image" placeholder="Image URL" />
         <input onChange={plantChange} type="number" name="price" step="0.01" placeholder="Price" />
-        <button onSubmit={handleSubmit} type="submit">Add Plant</button>
+        <button type="submit">Add Plant</button>
       </form>
     </div>
   );
