@@ -10,9 +10,9 @@ function PlantPage() {
 
   return (
 	<main>
-  	<NewPlantForm list={list} setList={setList}/>
-  	<Search list={list} setList={setList}/>
-  	<PlantList list={list} setList={setList}/>
+  		<NewPlantForm list={list} setList={setList}/>
+  		<Search list={list} setList={setList}/>
+  		<PlantList list={list} setList={setList}/>
 	</main>
   );
 }
