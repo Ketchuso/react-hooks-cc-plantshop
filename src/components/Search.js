@@ -1,8 +1,7 @@
-import { all } from "axios";
-import React, { useState } from "react";
+import React from "react";
 
-function Search({ list, setList }) {
-  const [allPlants, setAllPlants ] = useState(list); 
+function Search({ setQuery }) {
+  
 
   return (
     <div className="searchbar">
@@ -12,11 +11,8 @@ function Search({ list, setList }) {
         id="search"
         placeholder="Type a name to search..."
         onChange={(e) => {
-          const query = e.target.value.toLowerCase();
-          const results = query
-          ? allPlants.filter(el => el.name.toLowerCase().includes(query))
-          : allPlants;
-          setList(results)
+          const result = e.target.value.toLowerCase();
+          setQuery(result)
         }}
       />
     </div>
